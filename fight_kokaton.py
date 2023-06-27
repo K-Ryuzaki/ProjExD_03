@@ -150,7 +150,7 @@ class Beam:
 
     def update(self, screen: pg.Surface):
         """
-        ビームのうごくやつ
+        ビームの座標を更新して発射させた後の動きを作るところ
         """
         self.rct.move_ip(self.vx, self.vy)
         screen.blit(self.img, self.rct)
