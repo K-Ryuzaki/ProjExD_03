@@ -119,6 +119,9 @@ class Bomb:
 
 
 class Score:
+    """
+    スコア表示に関するクラス
+    """
     def __init__(self):
         self.font = pg.font.SysFont("hgp創英角ﾎﾟｯﾌﾟ体", 30)
         self.color = (0, 0, 255)
@@ -152,7 +155,6 @@ class Beam:
         self.rct.move_ip(self.vx, self.vy)
         screen.blit(self.img, self.rct)
 
-
 def main():
     pg.display.set_caption("たたかえ！こうかとん")
     screen = pg.display.set_mode((WIDTH, HEIGHT))    
@@ -171,8 +173,6 @@ def main():
                 return
             if event.type == pg.KEYDOWN and event.key == pg.K_SPACE:
                 beam = Beam(bird)  # ビームクラスのインスタンスを生成する
-
-
         screen.blit(bg_img, [0, 0])
         
         for bomb in bombs:
